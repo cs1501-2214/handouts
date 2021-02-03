@@ -18,14 +18,14 @@
   <script>
 
     var treeData = {
-      name: 'root',
+      name: 'solve(0)',
       x0: window.diagram.height / 2,
       y0: 0,
       children: []
     };
 
     var _transitions = [
-      window.diagram.addItem('child 1', 'root', treeData),
+      window.diagram.addItem('solve(1)', 'solve(0)', treeData),
       window.diagram.addItem('child 2', 'root', treeData),
       window.diagram.addItem('sub-child 1', 'child 1', treeData),
       window.diagram.addItem('sub-child 2', 'child 1', treeData),
