@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./plugin/diagram/revealjs-diagram.css">
 </head>
 <body>
-  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="./plugin/diagram/revealjs-diagram.js"></script>
   <script>
@@ -30,8 +30,9 @@
       window.diagram.addItem('solve(3)', 'solve(2)', treeData),
       window.diagram.addItem('solve(4)', 'solve(3)', treeData),
 
-      window.diagram.addItem('sub-child 1', 'child 1', treeData),
-      window.diagram.addItem('sub-child 2', 'child 1', treeData),
+      window.diagram.addItem('sub-child 1', 'solve(3)', treeData),
+      window.diagram.addItem('sub-child 2', 'solve(3)', treeData),
+      window.diagram.removeItem('sub-child 2', treeData),
     ];
 
     var _inverse_transitions = [
