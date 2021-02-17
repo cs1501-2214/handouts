@@ -1,7 +1,7 @@
 public class Driver {
   public static void main(String[] args){
     testBinaryTree();
-    System.out.println("===============");
+    System.out.println("\n===============");
     testBST();
   }
 
@@ -44,17 +44,22 @@ public class Driver {
     BinaryTree<Character> gTree =
       new BinaryTree<>('G');
     BinaryTree<Character> dTree =
-      new BinaryTree<>('D');
+      new BinaryTree<>();
     dTree.buildTree('D', null, fTree);
     BinaryTree<Character> aTree =
-        new BinaryTree<>('A');
+        new BinaryTree<>();
     aTree.buildTree('A', bTree, dTree);
     BinaryTree<Character> cTree =
-      new BinaryTree<>('C');
+      new BinaryTree<>();
     cTree.buildTree('C', null, gTree);
     BinaryTree<Character> eTree =
-      new BinaryTree<>('E');
+      new BinaryTree<>();
     eTree.buildTree('E', aTree, cTree);
+    System.out.print("Preorder: ");
+    eTree.preorderTraverse();
+    System.out.print("\nInorder: ");
     eTree.inorderTraverse();
+    System.out.print("\nPostorder: ");
+    eTree.postorderTraverse();
   }
 }
